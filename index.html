@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kabaddi Score Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Timer Section -->
+    <div class="timer-box">
+      <div class="match-timer">
+        <h3>Match Timer (15min)</h3>
+        <p id="match-timer">15:00</p>
+        <button onclick="startMatchTimer()">Start</button>
+        <button onclick="stopMatchTimer()">Stop</button>
+        <button onclick="rechargeMatchTimer()">Recharge</button>
+      </div>
+      <div class="raid-timer">
+        <h3>Raid Timer (30s)</h3>
+        <p id="raid-timer">30</p>
+        <button onclick="startRaidTimer()">Start</button>
+        <button onclick="stopRaidTimer()">Stop</button>
+        <button onclick="resetRaidTimer()">Reset</button>
+      </div>
+    </div>
+
+    <!-- Team Sections -->
+<!-- Team 1 Section -->
+<div class="team-box" id="team1">
+  <div id="team1-name-box" class="name-box">
+    <input type="text" id="team1-name-input" placeholder="Enter Team 1 Name" />
+    <button id="team1-name-btn" onclick="updateTeamName('team1')">Set Name</button>
+  </div>
+  <h2 id="team1-name">Team 1</h2>
+  <p id="team1-score">0</p>
+  <button onclick="addScore('team1')">+1</button>
+</div>
+
+<!-- Team 2 Section -->
+<div class="team-box" id="team2">
+  <div id="team2-name-box" class="name-box">
+    <input type="text" id="team2-name-input" placeholder="Enter Team 2 Name" />
+    <button id="team2-name-btn" onclick="updateTeamName('team2')">Set Name</button>
+  </div>
+  <h2 id="team2-name">Team 2</h2>
+  <p id="team2-score">0</p>
+  <button onclick="addScore('team2')">+1</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
